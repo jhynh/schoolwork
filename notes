@@ -1,0 +1,28 @@
+../../../../../../../../../../tmp/writetest499189473.txt
+../admin/noop.cgi?foo=bar
+X-foo: bar
+�http://www.example.com
+%68%74%74%70%3a%2f%2fww
+<foo>bar</ foo>
+ or 1=1 or 1=1
+ 1
+ 0
+  and 1=0;-- 
+  ) or (1=0
+  0
+  0
+  0
+  0
+  1
+  0
+  0
+  1
+  1
+  0
+  0
+  1
+
+  read it from temp folder into string instead of uploading it, the temporary folder that php creates
+  avoid carriage returns, and have the sql formatted correctly to see it
+  abstract->classes->functions->main
+  careful when considering control characters in a string, be sure to remove them from the query

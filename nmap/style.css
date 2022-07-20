@@ -1,0 +1,46 @@
+.highlight {
+  background-color: darkgrey;
+}
+.available {
+  background-color: lightgreen;
+}
+.unavailable{
+  background-color: darkgrey;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.split {
+  height: 92%;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  overflow-x: auto;
+}
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  }
+  body {
+    margin-top: 0px;
+  }
+
+.iframeTitle{
+  position:fixed;
+  bottom:165px;
+  right:165px;
+  z-index: 999;
+}
+
+.iframe {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 999;
+}

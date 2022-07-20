@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>HOME</title> 
+<style type="text/css">
+#navbar ul { 
+	margin: 0; 
+	padding: 5px; 
+	list-style-type: none; 
+	text-align: center; 
+	background-color: #000; 
+	} 
+ 
+#navbar ul li {  
+	display: inline; 
+	} 
+ 
+#navbar ul li a { 
+	text-decoration: none; 
+	padding: .2em 1em; 
+	color: #fff; 
+	background-color: #000; 
+	} 
+ 
+#navbar ul li a:hover { 
+	color: #000; 
+	background-color: #fff; 
+	}
+
+progress {
+	background-color: #000;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid red;*/
+    margin-top: 100px;
+	position: static;
+}
+
+.center {  
+  text-align: center;
+}
+
+</style>
+</head> 
+<body> 
+<div class="center">
+	<h2><b>UCI pscsg projects</b></h2>
+</div>
+<div id="navbar"> 
+  <ul>
+	<li><a href="database/index.php">Database</a></li>
+	<li><a href="copy/index.php">Database(copy)</a></li>
+	<li><a href="log/index.php">server_logs</a></li>
+	<!--<li><a href="interpolation/index.php">Interpolation</a></li>-->
+	<li><a href="nmap/index.php">Scan</a></li>
+	<!--<li><a href="oldhtml/home.html">Old Database</a></li>-->
+  </ul> 
+</div>
+<br><br>
+<div id="progress" class="center">
+	<label for="student">Student Database:</label>
+	<progress id="student" value="60" max="100"> 60% </progress> 60%
+	<br><label for="network">Network Scanner:</label>
+	<progress id="network" value="70" max="100"> 70% </progress> 70%
+</div>
+</body> 
+</html>
