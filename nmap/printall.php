@@ -10,14 +10,14 @@ include 'initialize.php';
 
 //-------------------------------------------------------------------
 //a refresh
-$dropper=$conn->prepare("DROP TABLE ip_status");
+$dropper=$conn->prepare("DROP TABLE IF EXISTS ip_status");
 $spoofer=$conn->prepare("CREATE TABLE IF NOT EXISTS `ip_status` ( `ip` varchar(15), PRIMARY KEY (`ip`), `status` varchar(4), `name` varchar(255), `last_active` varchar(24), `up_time` varchar(8),`down_time` varchar(8))DEFAULT CHARSET=utf8mb4");
+//$spoofer=$conn->prepare("CREATE TABLE IF NOT EXISTS `ip_status` ( `ip` varchar(15), PRIMARY KEY (`ip`), `status` varchar(4), `name` varchar(255), `date` DATE)DEFAULT CHARSET=utf8mb4");
+$check=$conn->prepare("select 1 from `ip_status`");
+//if table exists, drop it firsts
 
-if($dropper && $spoofer){
-    $dropper->execute();
-    $spoofer->execute();
-}
-
+$dropper->execute();
+$spoofer->execute();
 //-------------------------------------------------------------------
 
 $sql="INSERT INTO ip_status (ip, status, name, last_active, up_time, down_time) VALUES (?,?,?,?,?,?)";
@@ -85,5 +85,8 @@ for($i =0 ; $i<256; $i++){
     $stmt->bind_param("ssssss", $ip, $state, $thename, $lactive, $upT, $dwnT);
     $stmt->execute();
 }//end of for_loop
-$conn->close();
+
+//create temporary table temp(date DATE, ip int unsigned);
+//insert into temp(date,ip) values (20011023,INET_ATON("127.0.0.1"));
+//select INET_NTOA(`ip`) FROM temp;
 ?>

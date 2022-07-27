@@ -27,7 +27,7 @@
                         <th>STATUS</th>
                         <th>LAST_ACTIVE</th>
                     </tr>
-                    <?php include 'printtable.php' ?>
+                    <?php include 'printall.php'?>
             </table>
         </div>
     </div>
@@ -38,21 +38,20 @@
                 <tr>
                     <th>NAME</th>
                     <th>IP</th>
-                    <th>UP_TIME</th>
                 </tr>
+                <?php include 'printonline.php' ?>
             </table>
         </div>
         <div id="tableOff">
             <h1>offline</h1>
             <table id="off">
                 <tr>
-                    <th>NAME</th>
                     <th>IP</th>
-                    <th>DOWN_TIME</th>
                 </tr>
+                <?php include 'printoff.php' ?>
             </table>
         </div>
-        <div id="tableOff">
+        <div id="tableOff" style="position: fixed;   top:0px; right:200px;">
             <h1>Version</h1>
             <table id="ver">
                 <tr>
@@ -61,8 +60,8 @@
                 </tr>
             </table>
         </div>
-        <a class="iframeTitle">terminal commands: </a><br>
-        <iframe src="cmd.php" title="linux-commands" class="iframe"></iframe>
     </div>
+    <a class="iframeTitle">terminal commands: </a><br>
+    <iframe src="cmd.php" title="linux-commands" class="iframe"></iframe>
 </body>
 </html>
